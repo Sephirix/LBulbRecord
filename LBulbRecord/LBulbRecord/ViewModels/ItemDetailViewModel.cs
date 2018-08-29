@@ -6,10 +6,10 @@ namespace LBulbRecord.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Record Item { get; set; }
+        public ItemDetailViewModel(Record item = null)
         {
-            Title = item?.Text;
+            Title = item?.personnel;
             Item = item;
         }
     }

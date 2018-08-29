@@ -12,18 +12,18 @@ namespace LBulbRecord.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Record> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Record>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Record>(this, "AddsItem", async (obj, item) =>
             {
-                var newItem = item as Item;
+                var newItem = item as Record;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
             });

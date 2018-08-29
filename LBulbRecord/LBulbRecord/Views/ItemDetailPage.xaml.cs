@@ -13,21 +13,34 @@ namespace LBulbRecord.Views
     {
         ItemDetailViewModel viewModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(ItemDetailViewModel sd)
         {
             InitializeComponent();
 
-            BindingContext = this.viewModel = viewModel;
+            BindingContext = this.viewModel = sd;
+            
         }
 
         public ItemDetailPage()
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new Record
             {
-                Text = "Item 1",
-                Description = "This is an item description."
+                Id = Guid.NewGuid().ToString(),
+                dateCompleted = DateTime.Now,
+                dining = 0,
+                kitchen = 0,
+                hallway = 0,
+                storage = 0,
+                bedroom = 0,
+                totalSurrendered = 0,
+                personnel = "Vince",
+                remarks = "all led",
+                washroom = 0,
+                totalInstalled = 0,
+                totalRemoved = 0,
+                unitNumber = "0101"
             };
 
             viewModel = new ItemDetailViewModel(item);

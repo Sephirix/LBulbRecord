@@ -12,7 +12,7 @@ namespace LBulbRecord.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        public IDataStore<Record> DataStore => DependencyService.Get<IDataStore<Record>>() ?? new MockRecords();
 
         bool isBusy = false;
         public bool IsBusy

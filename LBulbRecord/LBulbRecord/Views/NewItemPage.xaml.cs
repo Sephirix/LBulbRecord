@@ -11,16 +11,30 @@ namespace LBulbRecord.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Record Item { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Item = new Record
             {
-                Text = "Item name",
-                Description = "This is an item description."
+
+                dateCompleted = DateTime.Now,
+                dining = 0,
+                kitchen = 0,
+                hallway = 0,
+                storage = 0,
+                bedroom = 0,
+                totalSurrendered =0,
+                personnel="Vince",
+                remarks = "all led",
+                washroom =0,
+                totalInstalled =0,
+                totalRemoved=0,
+                unitNumber = "0101"
+
+
             };
 
             BindingContext = this;
@@ -28,7 +42,7 @@ namespace LBulbRecord.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            MessagingCenter.Send(this, "AddsItem", Item);
             await Navigation.PopModalAsync();
         }
 

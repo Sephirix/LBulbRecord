@@ -7,7 +7,8 @@ namespace LBulbRecord.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        New
     }
     public class HomeMenuItem
     {
