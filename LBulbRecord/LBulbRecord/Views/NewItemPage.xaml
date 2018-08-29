@@ -22,12 +22,42 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
+         <ScrollView>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Personnel" FontSize="Medium" />
-            <Entry Text="{Binding Record.personnel}" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Entry  Text="{Binding Record.unitNumber}" FontSize="Small" Margin="0"
+            <Entry Text="{Binding Item.personnel}" FontSize="Small" />
+            <Label Text="Unit Number:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.unitNumber}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="Date Completed" FontSize="Medium" />
+            <DatePicker Date="{Binding Item.dateCompleted}" FontSize="Small" />
+            <Label Text="Dining:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.dining}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="kitchen" FontSize="Medium" />
+            <Entry Text="{Binding Item.kitchen}" FontSize="Small" />
+            <Label Text="kitchen:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.kitchen}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="bedroom" FontSize="Medium" />
+            <Entry Text="{Binding Item.bedroom}" FontSize="Small" />
+            <Label Text="washroom:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.washroom}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="storage:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.storage}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="remarks" FontSize="Medium" />
+            <Entry Text="{Binding Item.remarks}" FontSize="Small" />
+            <Label Text="totalSurrendered:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.totalSurrendered}" FontSize="Small" Margin="0"
+                    />
+            <Label Text="totalRemoved" FontSize="Medium" />
+            <Entry Text="{Binding Item.totalRemoved}" FontSize="Small" />
+            <Label Text="totalInstalled:" FontSize="Medium" />
+            <Entry  Text="{Binding Item.totalInstalled}" FontSize="Small" Margin="0"
                     />
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

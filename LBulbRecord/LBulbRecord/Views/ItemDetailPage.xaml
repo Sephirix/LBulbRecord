@@ -3,10 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LBulbRecord.Views.ItemDetailPage"
              Title="{Binding Title}">
+    <ScrollView>
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Unit#:" FontSize="Medium" />
         <Label Text="{Binding Item.unitNumber}" FontSize="Small"/>
         <Label Text="Remarks:" FontSize="Medium" />
         <Label Text="{Binding Item.remarks}" FontSize="Small"/>
+        <Label Text="totalInstalled:" FontSize="Medium" />
+        <Label Text="{Binding Item.totalInstalled}" FontSize="Small"/>
+        <Label Text="totalSurrendered:" FontSize="Medium" />
+        <Label Text="{Binding Item.totalSurrendered}" FontSize="Small"/>
+        <Label Text="totalRemoved:" FontSize="Medium" />
+        <Label Text="{Binding Item.totalRemoved}" FontSize="Small"/>
+        <Label Text="dateCompleted:" FontSize="Medium" />
+        <Label Text="{Binding Item.dateCompleted}" FontSize="Small"/>
+        <Label Text="dining:" FontSize="Medium" />
+        <Label Text="{Binding Item.dining}" FontSize="Small"/>
+        <Label Text="kitchen:" FontSize="Medium" />
+        <Label Text="{Binding Item.kitchen}" FontSize="Small"/>
+        <Label Text="hallway:" FontSize="Medium" />
+        <Label Text="{Binding Item.hallway}" FontSize="Small"/>
+        <Label Text="storage:" FontSize="Medium" />
+        <Label Text="{Binding Item.storage}" FontSize="Small"/>
+        <Label Text="bedroom:" FontSize="Medium" />
+        <Label Text="{Binding Item.bedroom}" FontSize="Small"/>
+        <Label Text="washroom:" FontSize="Medium" />
+        <Label Text="{Binding Item.washroom}" FontSize="Small"/>
+        
     </StackLayout>
+    </ScrollView>
 </ContentPage>
